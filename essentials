@@ -1,0 +1,22 @@
+// intro to multiset 
+
+#include<bits/stdc++.h>
+using namespace std; 
+ 
+ 
+int main(){
+	multiset<int>ms ;
+	
+	ms.insert(3) ;
+	ms.insert(0) ; 
+	ms.insert(7) ; 
+	ms.insert(-10) ;
+	for(auto it: ms){ 
+		cout<< it<< " " ;
+	} 
+	cout<<endl ;
+} 
+// it allows duplicates 
+// differet from set 
+// stores element in increasing order but can be changed using comparator
+//Supports standard set operations like insert(), erase(), count(), and find().
