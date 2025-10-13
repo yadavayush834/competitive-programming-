@@ -1,0 +1,5 @@
+std::string str_number = "12345";
+int integer_value = std::stoi(str_number);
+
+int myInteger = 12345;
+std::string myString = std::to_string(myInteger);
