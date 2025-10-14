@@ -1,0 +1,21 @@
+#include <iostream>
+#include <vector>
+#include <algorithm> // Required for std::max_element
+
+int main() {
+    std::vector<int> numbers = {4, 9, 2, 6, 3, 11, 7};
+
+    // Find the iterator to the maximum element
+    auto max_it = std::max_element(numbers.begin(), numbers.end());
+    auto min_it = std::min_element(numbers.begin(),numbers.end());
+
+    // Dereference the iterator to get the value of the maximum element
+    if (max_it != numbers.end()) { // Check if the vector is not empty
+        int max_value = *max_it;
+        std::cout << "The maximum element in the vector is: " << max_value << std::endl;
+    } else {
+        std::cout << "The vector is empty." << std::endl;
+    }
+
+    return 0;
+}
