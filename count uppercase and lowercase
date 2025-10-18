@@ -1,0 +1,13 @@
+uppercase_count = 0; 
+    lowercase_count = 0;
+
+    uppercase_count = std::count_if(text.begin(), text.end(), 
+                                    [](unsigned char c){ return std::isupper(c); });
+    lowercase_count = std::count_if(text.begin(), text.end(), 
+                                    [](unsigned char c){ return std::islower(c); });
+
+    std::cout << "\nMethod 2 (std::count_if):" << std::endl;
+    std::cout << "Uppercase letters: " << uppercase_count << std::endl;
+    std::cout << "Lowercase letters: " << lowercase_count << std::endl;
+
+    return 0;
