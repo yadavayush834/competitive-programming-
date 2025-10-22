@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+#include<iostream>
+using namespace std;
+
+int mex(vector<int>arr){
+    unordered_set<int>s(arr.begin(),arr.end());
+    int m = 0; 
+    while(s.count(m)) m++;
+    return m ; 
+}
+int main(){
+    vector<int>arr = {0,4,5};
+    
+    cout<< mex(arr) << endl;
+}
