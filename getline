@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string email;
+    std::string username;
+
+    std::cout << "Enter an email address (e.g., user@domain.com): ";
+    
+    // Use std::getline with three arguments:
+    // 1. std::cin: The input stream.
+    // 2. username: The string variable to store the result.
+    // 3. '@': The delimiter character.
+    // Reading stops *before* the '@' is reached.
+    std::getline(std::cin, username, '@');
+
+    // Output the part read
+    std::cout << "The part of the string before '@' is: " << username << std::endl;
+
+    /* Optional: The rest of the email (including the '@' and domain) 
+    is still in the input buffer. You can read the rest of the line 
+    if needed by reading the rest of the stream.
+    */
+    
+    return 0;
+}
